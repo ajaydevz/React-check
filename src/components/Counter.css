@@ -1,0 +1,11 @@
+.container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+
