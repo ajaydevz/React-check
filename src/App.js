@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+// App.js
+
+import { createContext, useState } from 'react';
 import './App.css';
+import UseReducer from './Review/UseReducer';
+import UseMemo from './Review/UseMemo';
+import UseRef from './Hooks/UseRef';
+import Todo from './Review/Todo';
+import About from './Review/About';
+import RouterReg from './Router/RouterReg';
+import ChildComponent from './ChildComponent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+    const [datafromchild,setDatafromchild] = useState('');
+
+    
+    const handledata =(messege)=>{
+        setDatafromchild(messege)
+    }
+    return (
+        <div className="App">
+            
+            {/* <MyContext.Provider value={{value,setValue}}>
+              <ChildComponent />
+            </MyContext.Provider> */}
+            {/*  < UseMemo /> */}
+            {/* <Todo /> */}
+          
+            {/* < RouterReg/> */}
+            <h>{datafromchild}</h>
+            <ChildComponent sendmsg={handledata}/>
+        </div>
+    );
 }
 
 export default App;
