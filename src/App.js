@@ -1,23 +1,26 @@
 // App.js
 
-import { createContext, useState } from 'react';
 import './App.css';
-import UseReducer from './Review/UseReducer';
+// import UseReducer from './Review/UseReducer';
 import UseMemo from './Review/UseMemo';
 import UseRef from './Hooks/UseRef';
-import Todo from './Review/Todo';
+import Todo from './Test1.js/Todo';
 import About from './Review/About';
 import RouterReg from './Router/RouterReg';
-import ChildComponent from './ChildComponent';
+import ChildComponent from './Green/ChildComponent';
+import AddNum from './Calculator/AddNum';
+import TwoCounter from './Test/TwoCounter';
+import State from './Green/Stateless';
+import Stateful from './Green/Stateful';
+import Todos from './Test1.js/Todos';
+import UseReducer from './Test/UseReducer';
+
+import Purecomponent from './Test1.js/Purecomponent';
+
 
 function App() {
-  
-    const [datafromchild,setDatafromchild] = useState('');
 
-    
-    const handledata =(messege)=>{
-        setDatafromchild(messege)
-    }
+  
     return (
         <div className="App">
             
@@ -26,10 +29,16 @@ function App() {
             </MyContext.Provider> */}
             {/*  < UseMemo /> */}
             {/* <Todo /> */}
-          
             {/* < RouterReg/> */}
-            <h>{datafromchild}</h>
-            <ChildComponent sendmsg={handledata}/>
+            {/* <RouterReg /> */}
+            {/* <TwoCounter /> */}
+            {/* <State /> */}
+            {/* <Stateful/> */}
+            {/* <ChildComponent name="hello," purpose=" hey from parent" /> */}
+            {/* <MoreData {...props}/> */}
+            {/* <Purecomponent /> */}
+            <UseReducer />
+
         </div>
     );
 }

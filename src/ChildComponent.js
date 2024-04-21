@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function ChildComponent({sendmsg}) {
+function ChildComponent({sendMessege}) {
 
-  const SendData =()=>{
-    sendmsg("heyy from child component")
+  const HandleClick =()=>{
+    sendMessege("hey from child component")
+    console.log("hii child")
   }
+  
 
+  
   return (
     <div>
-        
-      <button onClick={SendData}> click me</button>
+        <button onClick={HandleClick}> click me </button>
     </div>
   )
 }

@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 
+window.$name = "hello world"
+
 function AddNum() {
 
+    const name = window.$name
+    console.log(name)
     const [number1, setNumber1] = useState()
     const [number2, setNumber2] = useState()
     const [total, setTotal] = useState(number1+number2)
